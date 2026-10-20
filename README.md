@@ -103,7 +103,7 @@ jupyter nbconvert --to notebook --execute analise.ipynb --output analise.ipynb
 - Com `BAIXAR_DADOS = False` (padrão, 1ª célula do notebook), tudo roda a partir dos CSVs de `data/processed/`, sem acessar a internet. Leva cerca de 1 minuto.
 - Com `BAIXAR_DADOS = True`, a coleta é refeita na API da NBA (alguns minutos para a rede; cerca de 1 h para a distribuição por jogo, por causa do limite de taxa do servidor). Os JSONs já presentes em `data/raw/` servem de cache.
 - Todas as figuras de `figures/` são regeneradas pelo notebook.
-- Testado em um venv novo (Windows 11, Python 3.12.10) com o comando acima: TESTE_REPRODUCAO
+- Testado em um venv novo (Windows 11, Python 3.12.10) com o comando acima, a partir de um `git clone` novo e com `figures/` apagada: **26 células executadas, 0 erros, 9 figuras regeneradas, ~30 s** (20/10/2026).
 
 ## Resultados
 
