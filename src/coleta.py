@@ -223,8 +223,12 @@ def _arestas(dados_por_jogador, ids_validos):
     return dentro, fora
 
 
-def coletar_tudo(nome="Gui Santos", distribuicao=True):
-    """Pipeline completo de coleta + limpeza. Grava CSVs em data/processed/."""
+def coletar_tudo(nome="Gui Santos", distribuicao=True, somente_cache=False):
+    """Pipeline completo de coleta + limpeza. Grava CSVs em data/processed/.
+
+    somente_cache=True: na distribuição por jogo, usa só os jogos cujos JSONs já
+    estão em data/raw/ (sem novos requests), útil quando a API está limitando.
+    """
     PROCESSED.mkdir(parents=True, exist_ok=True)
 
     # 1) jogador e jogo do recorde
@@ -313,6 +317,10 @@ def coletar_tudo(nome="Gui Santos", distribuicao=True):
         linhas = []
         for _, g in jogos_temp.iterrows():
             dia = pd.to_datetime(g["GAME_DATE"]).strftime("%m/%d/%Y")
+            if somente_cache and not all((RAW / f).exists() for f in [
+                    f"passes_{jogador['id']}_{temporada}_{dia.replace('/', '-')}.json",
+                    f"passes_time_{GSW_TEAM_ID}_{dia.replace('/', '-')}.json"]):
+                continue
             try:
                 d = passes_jogador(jogador["id"], temporada, tipo, data=dia)
                 t = passes_time_dia(dia, temporada, tipo)

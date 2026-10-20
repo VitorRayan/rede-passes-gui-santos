@@ -206,8 +206,11 @@ def forca_por_36(df, minutos):
 
 
 def ranks(df, colunas):
-    """Rank (1 = maior) de cada jogador em cada medida."""
-    return df[colunas].rank(ascending=False, method="min").astype(int)
+    """Rank (1 = maior) de cada jogador em cada medida.
+
+    Empates recebem a PIOR posição do grupo (method="max"): se 7 jogadores têm
+    betweenness 0, todos ficam em 10º, e não em 4º. É a escolha conservadora."""
+    return df[colunas].rank(ascending=False, method="max").astype(int)
 
 
 def nucleo_periferia(df, coluna="forca_total"):

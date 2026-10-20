@@ -1,0 +1,9 @@
+medida,rank_jogo,rank_temporada,valor_jogo / máx,valor_temp / máx,subiu?
+passes recebidos,1,5,1.0,0.6468531002281606,sim ↑
+recebidos por 36 min,1,4,1.0,0.7687429430931529,sim ↑
+parcela dos passes do time,1,5,1.0,0.6468531002281604,sim ↑
+closeness (entrada),1,6,1.0,0.740704576647559,sim ↑
+betweenness,1,10,1.0,0.0,sim ↑
+eigenvector (entrada),2,5,0.9779612665584667,0.6690311594922276,sim ↑
+PageRank,1,5,1.0,0.6898296780145797,sim ↑
+passes feitos,3,4,0.9183673469387755,0.7390200702209412,sim ↑
