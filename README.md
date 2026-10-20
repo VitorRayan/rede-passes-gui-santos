@@ -1,7 +1,7 @@
 # A bola passou pelo Gui? Rede de passes do Golden State Warriors no jogo do recorde de Gui Santos
 
 ## Integrantes
-**[COLOQUE AQUI OS NOMES COMPLETOS DE TODOS OS INTEGRANTES]** · Nome Completo 2 · Nome Completo 3
+Cassio Costa Alves Domingos · Vitor Rayan Mendes Ribeiro
 
 ## Vídeo
 **LINK_DO_VIDEO_AQUI** (até 15 min no total)
