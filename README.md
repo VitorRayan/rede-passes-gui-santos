@@ -57,33 +57,33 @@ Os números são o contador de execução `[N]` da célula de código em `analis
 
 | conceito | semana | onde aparece | para que serviu |
 |---|---|---|---|
-| grafo dirigido ponderado (`DiGraph`) com atributos nos nós | 2 | `analise.ipynb`, cél. [None] | nó = jogador, aresta A→B = passe; a direção separa quem distribui de quem recebe |
-| número de nós/arestas, densidade, reciprocidade | 2 | `analise.ipynb`, cél. [None] | densidade 0,76 no jogo: quase todo mundo passa para quase todo mundo, então é o **peso** (nº de passes) que diferencia os jogadores |
-| matriz de adjacência (heatmap) | 2 | `analise.ipynb`, cél. [None] | "quem passa para quem": a coluna do Gui (passes recebidos) é a mais carregada do jogo |
-| grau e distribuição de grau (entrada/saída) | 2 | `analise.ipynb`, cél. [None] | nº de companheiros distintos: o Gui recebeu passes de todos os 9 em quadra |
-| atributos das arestas (AST, FGA após o passe) | 2 | `analise.ipynb`, cél. [None] | cesta assistida = criada pelo passe de um companheiro, ou seja, ponto que veio "de dentro" da rede |
-| grau de entrada e de saída ponderados (força), por 36 min | 3 | `analise.ipynb`, cél. [None] | força de entrada = quanto a bola chega ao jogador; de saída = quanto ele distribui; por 36 min tira o efeito dos minutos |
-| núcleo e periferia | 3 | `analise.ipynb`, cél. [None] | núcleo = quem concentra a circulação (força total acima da mediana); periferia = quem só complementa |
-| BFS e DFS | 3 | `analise.ipynb`, cél. [None] | camadas a partir do Gui no esqueleto de passes fortes (≥5): a quantos passes cada companheiro está dele |
-| amostragem snowball | 3 | `analise.ipynb`, cél. [None] | ondas a partir do Gui seguindo passes fortes: até onde a bola vai partindo dele |
-| componentes (WCC, SCC) | 4 | `analise.ipynb`, cél. [None] | uma única SCC: a bola consegue ir de qualquer jogador a qualquer outro |
-| caminhos, distâncias e diâmetro | 4 | `analise.ipynb`, cél. [None] | diâmetro 2; a distância ponderada (1/passes) média **até** o Gui é a menor do time, ou seja, a bola chega "mais perto" dele |
-| eficiência global (não ponderada e ponderada) | 4 | `analise.ipynb`, cél. [None] | facilidade de a bola circular; base para medir quanto o ataque depende de um jogador |
-| centralidade de grau | 4 | `analise.ipynb`, cél. [None] | com quantos companheiros o jogador troca passes |
-| closeness de entrada (distância = 1/passes) | 4 | `analise.ipynb`, cél. [None] | closeness alta = a bola chega rápido ao jogador saindo de qualquer companheiro |
-| betweenness (distância = 1/passes) | 4 | `analise.ipynb`, cél. [None] | betweenness alta = jogador por onde a bola precisa passar para ir de um lado ao outro do ataque |
-| eigenvector (arestas de entrada) e PageRank | 4 | `analise.ipynb`, cél. [None] | prestígio: recebe passes de quem também é muito procurado (os "jogadores de confiança") |
-| triângulos e clustering (não dirigido, ponderado) | 4 | `analise.ipynb`, cél. [None] | quanto os parceiros de passe do jogador também trocam passes entre si (triangulações) |
-| visualização da rede (layout circular) | 4 | `analise.ipynb`, cél. [None] | espessura = passes, tamanho = pontos, Gui em dourado: jogo e temporada lado a lado |
-| nxviz (CircosPlot e MatrixPlot) | 4 | `analise.ipynb`, cél. [None] | a ferramenta de visualização mostrada no curso, aplicada à rede do jogo |
-| robustez (remoção de nó, eficiência) | 4 | `analise.ipynb`, cél. [None] | quanto a circulação piora sem o Gui, comparado com tirar o jogador mais central (Podziemski) e com tirar qualquer outro |
-| comparação de centralidades entre duas redes (ranks) | 4 | `analise.ipynb`, cél. [None] | **a resposta da pergunta:** a posição do Gui no jogo do recorde vs. na temporada |
-| k-core, core number, degeneracy, onion layers | 5 | `analise.ipynb`, cél. [None] | o Gui está no miolo mais coeso das ligações do time ou na borda? |
-| k-truss | 5 | `analise.ipynb`, cél. [None] | coesão por triângulos: grupos em que cada par de passe faz parte de várias triangulações |
-| k-core no esqueleto por limiar | 5 e 6 | `analise.ipynb`, cél. [None] | quem continua no núcleo quando só as ligações fortes contam |
-| esqueleto por limiar (k ∈ {1,2,3,5}) | 6 | `analise.ipynb`, cél. [None] | a conclusão não depende de onde cortamos as arestas fracas? |
-| similaridade de Jaccard | 6 | `analise.ipynb`, cél. [None] | quanto do esqueleto de passes do jogo é o mesmo da temporada, na rede toda e nas arestas do Gui |
-| modelagens alternativas: peso = assistências; não dirigida | 2 e 4 | `analise.ipynb`, cél. [None] | a resposta muda se o peso for assistência ou se ignorarmos a direção? |
+| grafo dirigido ponderado (`DiGraph`) com atributos nos nós | 2 | `analise.ipynb`, cél. [5] | nó = jogador, aresta A→B = passe; a direção separa quem distribui de quem recebe |
+| número de nós/arestas, densidade, reciprocidade | 2 | `analise.ipynb`, cél. [6] | densidade 0,76 no jogo: quase todo mundo passa para quase todo mundo, então é o **peso** (nº de passes) que diferencia os jogadores |
+| matriz de adjacência (heatmap) | 2 | `analise.ipynb`, cél. [7] | "quem passa para quem": a coluna do Gui (passes recebidos) é a mais carregada do jogo |
+| grau e distribuição de grau (entrada/saída) | 2 | `analise.ipynb`, cél. [8] | nº de companheiros distintos: o Gui recebeu passes de todos os 9 em quadra |
+| atributos das arestas (AST, FGA após o passe) | 2 | `analise.ipynb`, cél. [21] | cesta assistida = criada pelo passe de um companheiro, ou seja, ponto que veio "de dentro" da rede |
+| grau de entrada e de saída ponderados (força), por 36 min | 3 | `analise.ipynb`, cél. [9] | força de entrada = quanto a bola chega ao jogador; de saída = quanto ele distribui; por 36 min tira o efeito dos minutos |
+| núcleo e periferia | 3 | `analise.ipynb`, cél. [9] | núcleo = quem concentra a circulação (força total acima da mediana); periferia = quem só complementa |
+| BFS e DFS | 3 | `analise.ipynb`, cél. [11] | camadas a partir do Gui no esqueleto de passes fortes (≥5): a quantos passes cada companheiro está dele |
+| amostragem snowball | 3 | `analise.ipynb`, cél. [11] | ondas a partir do Gui seguindo passes fortes: até onde a bola vai partindo dele |
+| componentes (WCC, SCC) | 4 | `analise.ipynb`, cél. [12] | uma única SCC: a bola consegue ir de qualquer jogador a qualquer outro |
+| caminhos, distâncias e diâmetro | 4 | `analise.ipynb`, cél. [12] | diâmetro 2; a distância ponderada (1/passes) média **até** o Gui é a menor do time, ou seja, a bola chega "mais perto" dele |
+| eficiência global (não ponderada e ponderada) | 4 | `analise.ipynb`, cél. [12] | facilidade de a bola circular; base para medir quanto o ataque depende de um jogador |
+| centralidade de grau | 4 | `analise.ipynb`, cél. [13] | com quantos companheiros o jogador troca passes |
+| closeness de entrada (distância = 1/passes) | 4 | `analise.ipynb`, cél. [13] | closeness alta = a bola chega rápido ao jogador saindo de qualquer companheiro |
+| betweenness (distância = 1/passes) | 4 | `analise.ipynb`, cél. [13] | betweenness alta = jogador por onde a bola precisa passar para ir de um lado ao outro do ataque |
+| eigenvector (arestas de entrada) e PageRank | 4 | `analise.ipynb`, cél. [13] | prestígio: recebe passes de quem também é muito procurado (os "jogadores de confiança") |
+| triângulos e clustering (não dirigido, ponderado) | 4 | `analise.ipynb`, cél. [13] | quanto os parceiros de passe do jogador também trocam passes entre si (triangulações) |
+| visualização da rede (layout circular) | 4 | `analise.ipynb`, cél. [14] | espessura = passes, tamanho = pontos, Gui em dourado: jogo e temporada lado a lado |
+| nxviz (CircosPlot e MatrixPlot) | 4 | `analise.ipynb`, cél. [15] | a ferramenta de visualização mostrada no curso, aplicada à rede do jogo |
+| robustez (remoção de nó, eficiência) | 4 | `analise.ipynb`, cél. [18] | quanto a circulação piora sem o Gui, comparado com tirar o jogador mais central (Podziemski) e com tirar qualquer outro |
+| comparação de centralidades entre duas redes (ranks) | 4 | `analise.ipynb`, cél. [19] | **a resposta da pergunta:** a posição do Gui no jogo do recorde vs. na temporada |
+| k-core, core number, degeneracy, onion layers | 5 | `analise.ipynb`, cél. [16] | o Gui está no miolo mais coeso das ligações do time ou na borda? |
+| k-truss | 5 | `analise.ipynb`, cél. [16] | coesão por triângulos: grupos em que cada par de passe faz parte de várias triangulações |
+| k-core no esqueleto por limiar | 5 e 6 | `analise.ipynb`, cél. [17] | quem continua no núcleo quando só as ligações fortes contam |
+| esqueleto por limiar (k ∈ {1,2,3,5}) | 6 | `analise.ipynb`, cél. [23] | a conclusão não depende de onde cortamos as arestas fracas? |
+| similaridade de Jaccard | 6 | `analise.ipynb`, cél. [24] | quanto do esqueleto de passes do jogo é o mesmo da temporada, na rede toda e nas arestas do Gui |
+| modelagens alternativas: peso = assistências; não dirigida | 2 e 4 | `analise.ipynb`, cél. [26] | a resposta muda se o peso for assistência ou se ignorarmos a direção? |
 
 **Não usados, e por quê:** redes bipartidas, projeção e matriz de incidência (semana 6) não se aplicam a uma rede de passes jogador→jogador sem um segundo tipo de nó (forçar uma bipartição jogador–posse exigiria dados sequenciais que o rastreamento não fornece); multigrafo (semana 2): os passes repetidos entre o mesmo par viraram **peso** em vez de arestas paralelas, o que é equivalente e mais simples; Gephi (opcional) foi substituído pelo matplotlib/nxviz para manter tudo reprodutível pelo código.
 
