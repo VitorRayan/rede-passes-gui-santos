@@ -98,6 +98,8 @@ python -m venv .venv
 # Windows: .venv\Scripts\activate    |    Linux/macOS: source .venv/bin/activate
 pip install -r requirements.txt
 jupyter nbconvert --to notebook --execute analise.ipynb --output analise.ipynb
+# ou, equivalente (também funciona com o ▶ do VS Code):
+python rodar.py
 ```
 
 - Com `BAIXAR_DADOS = False` (padrão, 1ª célula do notebook), tudo roda a partir dos CSVs de `data/processed/`, sem acessar a internet. Leva cerca de 1 minuto.
