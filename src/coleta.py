@@ -328,4 +328,14 @@ def coletar_tudo(nome="Gui Santos", distribuicao=True):
                            "passes_time": time_total})
         pd.DataFrame(linhas).to_csv(PROCESSED / "gui_por_jogo.csv", index=False)
 
+        # jogos em que as estrelas (Curry, Butler) jogaram: contexto de desfalques
+        from nba_api.stats.endpoints import playergamelog
+        estrelas = []
+        for pid, nome_e in [(201939, "Stephen Curry"), (202710, "Jimmy Butler")]:
+            d = chamar(playergamelog.PlayerGameLog, f"gamelog_{pid}_{temporada}_{tipo.replace(' ', '')}",
+                       player_id=pid, season=temporada, season_type_all_star=tipo)
+            g = resultset_df(d, "PlayerGameLog")
+            estrelas += [{"jogador": nome_e, "game_id": x} for x in g["Game_ID"]]
+        pd.DataFrame(estrelas).to_csv(PROCESSED / "estrelas_jogos.csv", index=False)
+
     return {"jogo_fora": fora_jogo, "temporada_fora": fora_temp}
