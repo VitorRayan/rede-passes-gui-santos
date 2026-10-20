@@ -2,7 +2,6 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-.claude/
 prompt_claude_code.md
 .vscode/
 prompt_pdf_roteiro.md
