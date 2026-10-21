@@ -4,7 +4,7 @@
 Cassio Costa Alves Domingos · Vitor Rayan Mendes Ribeiro
 
 ## Vídeo
-**LINK_DO_VIDEO_AQUI** (até 15 min no total)
+(https://youtu.be/k-hyrH6IbX0)
 
 ## Problema e pergunta
 
